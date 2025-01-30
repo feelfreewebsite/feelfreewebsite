@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feel Free - Home</title>
+    <title>Feel Free - Notes for All Students</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<input type="text" id="searchBox" placeholder="Enter subject name">
-<button onclick="searchNotes()">Search</button>
-<div id="results"></div>
+    <!-- Search Section -->
+    <div id="searchSection">
+        <input type="text" id="searchBox" placeholder="Enter subject name (e.g., Java)">
+        <button onclick="searchNotes()">Search</button>
+    </div>
+
+    <!-- Search Results Section -->
+    <div id="results"></div>
+
+    <!-- Header Section -->
     <header>
         <h1>Feel Free - Notes for All Students</h1>
         <nav>
@@ -21,14 +28,19 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Main Content Section -->
     <main>
         <h2>Welcome to Feel Free!</h2>
         <p>Access free study materials for school, college, and graduate levels.</p>
     </main>
+
+    <!-- Footer Section -->
     <footer>
-        <p>© 2025 Feel Free. All rights reserved.</p>
+        <p>©️ 2025 Feel Free. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
