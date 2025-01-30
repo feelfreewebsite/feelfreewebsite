@@ -1,17 +1,31 @@
+// List of files (replace these with actual file paths)
+const files = [
+    { name: "java_notes.pdf", url: "Notes/java_notes.pdf" },
+    { name: "java_tutorial.pdf", url: "Notes/java_tutorial.pdf" },
+    { name: "python_notes.pdf", url: "Notes/python_notes.pdf" },
+    { name: "c_programming.pdf", url: "Notes/c_programming.pdf" }
+];
+
+// Search function
 function searchNotes() {
-    let query = document.getElementById("searchBox").value.toLowerCase();
-    let notes = {
-        "java": "java.pdf",
-        "python": "python.pdf",
-        "math": "math.pdf"
-    };
+    const query = document.getElementById("searchBox").value.toLowerCase(); // Get the search term
+    const results = files.filter(file => file.name.toLowerCase().includes(query)); // Filter files based on the query
+    const resultsDiv = document.getElementById("results");
 
-    let resultsDiv = document.getElementById("results");
-    resultsDiv.innerHTML = "";  // Clear previous results
+    // Clear previous results
+    resultsDiv.innerHTML = "";
 
-    if (notes[query]) {
-        resultsDiv.innerHTML = <p>📄 <a href="${notes[query]}" target="_blank">Download ${query} Notes</a></p>;
+    // Check if there are any matching results
+    if (results.length > 0) {
+        results.forEach(file => {
+            const link = document.createElement("a");
+            link.href = file.url; // File path
+            link.textContent = file.name; // File name
+            link.target = "_blank"; // Open in a new tab
+            resultsDiv.appendChild(link);
+            resultsDiv.appendChild(document.createElement("br")); // Line break
+        });
     } else {
-        resultsDiv.innerHTML = <p>❌ No notes found for "${query}".</p>;
+        resultsDiv.textContent = "No results found."; // Show this if no files match
     }
 }
