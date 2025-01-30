@@ -2,7 +2,7 @@
 const files = [
     { name: "java_notes.pdf", url: "Notes/java_notes.pdf" },
     { name: "java_tutorial.pdf", url: "Notes/java_tutorial.pdf" },
-    { name: "python_notes.pdf", url: "Notes/python_notes.pdf" },
+    { name: "cloud_notes.pdf", url: "Notes/cloud_notes.pdf" },
     { name: "c_programming.pdf", url: "Notes/c_programming.pdf" }
 ];
 
