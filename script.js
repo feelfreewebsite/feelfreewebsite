@@ -29,3 +29,22 @@ function searchNotes() {
         resultsDiv.textContent = "No results found."; // Show this if no files match
     }
 }
+const toggleSwitch = document.getElementById('darkModeToggle');
+const body = document.body;
+
+// Check if dark mode was previously enabled
+if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+    toggleSwitch.checked = true;
+}
+
+// Toggle dark mode on switch change
+toggleSwitch.addEventListener('change', () => {
+    if (toggleSwitch.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');
+    }
+});
