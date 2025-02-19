@@ -43,18 +43,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Dark mode functionality
   const toggleSwitch = document.getElementById("darkModeToggle");
+  const darkModeText = document.getElementById("darkModeText");
   const body = document.body;
 
   // Function to enable dark mode
   const enableDarkMode = () => {
     body.classList.add("dark-mode");
     localStorage.setItem("darkMode", "enabled");
+    darkModeText.textContent = "Light Mode"; // Change text dynamically
   };
 
   // Function to disable dark mode
   const disableDarkMode = () => {
     body.classList.remove("dark-mode");
     localStorage.setItem("darkMode", "disabled");
+    darkModeText.textContent = "Dark Mode"; // Change text dynamically
   };
 
   // Check if dark mode was previously enabled
@@ -70,7 +73,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
