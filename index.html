@@ -7,21 +7,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Search Section -->
-    <div id="searchSection">
-        <input type="text" id="searchBox" placeholder="Enter subject name (e.g., Java)">
-        <button onclick="searchNotes()">Search</button>
-    </div>
-
-    <!-- Search Results Section -->
-    <div id="results"></div>
-
     <!-- Header Section -->
     <header>
-        <label class="switch">
-    <input type="checkbox" id="darkModeToggle">
-    <span class="slider"></span>
-</label> 
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+            </label> 
+            <span id="darkModeText">Dark Mode</span>
+        </div>
         <h1>Feel Free - Notes for All Students</h1>
         <nav>
             <ul>
@@ -32,6 +26,15 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Search Section -->
+    <div id="searchSection">
+        <input type="text" id="searchBox" placeholder="Enter subject name (e.g., Java)">
+        <button onclick="searchNotes()">Search</button>
+    </div>
+
+    <!-- Search Results Section -->
+    <div id="results"></div>
 
     <!-- Main Content Section -->
     <main>
