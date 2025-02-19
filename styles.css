@@ -52,6 +52,9 @@ header nav ul li a:hover {
     width: 300px;
     border: 1px solid #4CAF50;
     border-radius: 5px;
+    background-color: white;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 button {
@@ -100,6 +103,8 @@ footer {
     position: fixed;
     top: 20px;
     right: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .switch {
@@ -107,6 +112,7 @@ footer {
     width: 50px;
     height: 25px;
     position: relative;
+    margin-left: 10px;
 }
 
 .switch input {
@@ -145,24 +151,25 @@ body.dark-mode {
     color: #ffffff;
 }
 
-.dark-mode header {
-    background-color: #1E1E1E;
-}
-
+/* Dark Mode for Header & Footer */
+.dark-mode header, 
 .dark-mode footer {
     background-color: #1E1E1E;
 }
 
+/* Dark Mode for Search Box */
 .dark-mode #searchBox {
     background-color: #222;
     color: white;
     border: 1px solid #555;
 }
 
+/* Dark Mode for Search Results */
 .dark-mode #results a {
     color: #66ff99;
 }
 
+/* Dark Mode for Buttons */
 .dark-mode button {
     background-color: #66bb6a;
 }
